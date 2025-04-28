@@ -56,3 +56,12 @@
 	height: 100px;
 	width: 100px;
 }
+
+#validate-button {
+	background: var(--button-background);
+}
+
+.age-range-values {
+	display: flex;
+	justify-content: space-around;
+}

@@ -7,81 +7,112 @@ import ProfileCard from "../components/ProfileCard/ProfileCard";
 import "./Profile.css";
 
 function Profile() {
-	const [requestGenre, setRequestGenre] = useState<string[]>([]);
+	const [display, setDisplay] = useState("panneau1");
 
-	const profilesfiltered = profilesData.filter((profile) => {
-		return requestGenre.includes(profile.genre);
+	const [requestGenre, setRequestGenre] = useState<string[]>([]);
+	/*const [minAge, setMinAge] = useState(18);*/
+	const [maxAge, setMaxAge] = useState(99);
+
+	const profilesFiltered = profilesData.filter((profile) => {
+		return requestGenre.includes(profile.genre) && profile.age <= maxAge;
 	});
-	const isFiltered = requestGenre.length > 0;
+
+	const handleAgeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setMaxAge(Number(e.target.value));
+	};
+
+	const handleGenderClick = (gender: string[]) => {
+		setDisplay("panneau2");
+		setRequestGenre(gender);
+	};
+
+	const handleShowfilteredProfiles = () => {
+		setDisplay("panneau3");
+	};
 
 	return (
 		<>
-			<section className="genderfilter-container">
-				{!isFiltered ? (
-					<>
-						<article className="main-text">
-							<h1>Je veux boire un verre avec :</h1>
-						</article>
-						<article className="button-container">
-							<button
-								type="button"
-								className="gender-buttons"
-								id="masculine"
-								onClick={() => {
-									setRequestGenre(["M"]);
-								}}
-							>
-								<img src={masculineLogo} alt="masculine" />
-							</button>
-							<button
-								type="button"
-								className="gender-buttons"
-								id="feminine"
-								onClick={() => {
-									setRequestGenre(["F"]);
-								}}
-							>
-								<img src={feminineLogo} alt="feminine" />
-							</button>
-							<button
-								type="button"
-								className="gender-buttons"
-								id="neutral"
-								onClick={() => {
-									setRequestGenre(["F", "M"]);
-								}}
-							>
-								<img src={neutralLogo} alt="neutral" />
-							</button>
-						</article>
-					</>
-				) : (
+			{display === "panneau1" && (
+				<section className="genderfilter-container">
+					<article className="main-text">
+						<h1>Je veux boire un verre avec :</h1>
+					</article>
+					<article className="button-container">
+						<button
+							type="button"
+							className="gender-buttons"
+							id="masculine"
+							onClick={() => {
+								handleGenderClick(["M"]);
+							}}
+						>
+							<img src={masculineLogo} alt="masculine" />
+						</button>
+						<button
+							type="button"
+							className="gender-buttons"
+							id="feminine"
+							onClick={() => {
+								handleGenderClick(["F"]);
+							}}
+						>
+							<img src={feminineLogo} alt="feminine" />
+						</button>
+						<button
+							type="button"
+							className="gender-buttons"
+							id="neutral"
+							onClick={() => {
+								handleGenderClick(["F", "M"]);
+							}}
+						>
+							<img src={neutralLogo} alt="neutral" />
+						</button>
+					</article>
+				</section>
+			)}
+
+			{display === "panneau3" && (
+				<section className="profiles-container">
 					<article className="profiles-data">
-						{profilesfiltered.map((profile) => {
-							return (
-								<ProfileCard
-									key={profile.id}
-									profile={profile}
-									onClick={() => setRequestGenre([])}
-								/>
-							);
+						{profilesFiltered.map((profile) => {
+							return <ProfileCard key={profile.id} profile={profile} />;
 						})}
 					</article>
-				)}
-			</section>
-			<section className="agefilter-container">
-				<article className="main-text">
-					<h1>Je cherche une personne entre :</h1>
-				</article>
-				<article id="filterbar-container">
-					<p>Mon filtre d'âge </p>
-				</article>
-				<article>
-					<button type="button" id="validate-button" onClick={() => {}}>
-						Montre moi!
-					</button>
-				</article>
-			</section>
+				</section>
+			)}
+
+			{display === "panneau2" && (
+				<section className="agefilter-container">
+					<article className="main-text">
+						<h1>Je cherche une personne entre :</h1>
+					</article>
+					<article id="age-slider-container">
+						<p> Mon filtre d'âge </p>
+						<div className="age-range-values">
+							<span className="min-age">18</span>
+							<span className="max-age">{maxAge}</span>
+						</div>
+						<input
+							type="range"
+							id="age-slider"
+							min={18}
+							max={99}
+							value={maxAge}
+							onChange={handleAgeChange}
+						/>
+					</article>
+					<article>
+						<button
+							type="button"
+							id="validate-button"
+							onClick={handleShowfilteredProfiles}
+						>
+							Montre moi!
+						</button>
+					</article>
+				</section>
+			)}
 		</>
 	);
 }
