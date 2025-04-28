@@ -1,7 +1,8 @@
 import "./Header.css";
+import pinkRabbitLogo from "../../assets/Pink_Rabbit_logo.png";
 
 function Header() {
-	return <h1>PINK RABBIT</h1>;
+	return <img src={pinkRabbitLogo} alt="Pink Rabbit Logo" />;
 }
 
 export default Header;
