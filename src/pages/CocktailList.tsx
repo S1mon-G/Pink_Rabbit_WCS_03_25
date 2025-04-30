@@ -2,6 +2,13 @@ import { useEffect, useState } from "react";
 import CocktailCard from "../components/CocktailCard/CocktailCard";
 import "./CocktailList.css";
 
+interface CocktailListProps {
+	cocktail: {
+		idDrink: string;
+		strDrink: string;
+		strDrinkThumb: string;
+	};
+}
 const popularCocktailList = [
 	"Margarita",
 	"Daiquiri",
@@ -13,7 +20,7 @@ const popularCocktailList = [
 	"Manhattan",
 	"Negroni",
 	"Martini",
-	"Whisky Sour",
+	"Whiskey Sour",
 	"Gin Tonic",
 ];
 
@@ -39,8 +46,8 @@ function CocktailList() {
 		fetchCocktails();
 	}, []);
 
-	const cocktailFiltered = cocktails.filter((drink) =>
-		drink.strDrink.toLowerCase().includes(search.toLowerCase()),
+	const cocktailFiltered = cocktails.filter((cocktail) =>
+		cocktail.strDrink.toLowerCase().includes(search.toLowerCase()),
 	);
 
 	return (
@@ -56,17 +63,11 @@ function CocktailList() {
 			/>
 
 			<div className="cocktail-list-filter">
-				{cocktailFiltered.map((drink) => (
-					<CocktailCard
-						key={drink.idDrink}
-						idDrink={drink.idDrink}
-						strDrink={drink.strDrink}
-						strDrinkThumb={drink.strDrinkThumb}
-					/>
+				{cocktailFiltered.map((cocktail) => (
+					<CocktailCard key={cocktail.idDrink} cocktail={cocktail} />
 				))}
 			</div>
 		</div>
 	);
 }
-
 export default CocktailList;
