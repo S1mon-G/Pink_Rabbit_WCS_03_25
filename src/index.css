@@ -3,9 +3,4 @@
 	--element-background: #f25c5c;
 	--button-background: linear-gradient(#f2059f, #f20505);
 	--nav-background: linear-gradient(#6929f2, #f2059f);
-	--main-font: "DynaPuff", system-ui;
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 }
