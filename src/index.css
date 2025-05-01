@@ -1,11 +1,15 @@
 :root {
 	--app-background: linear-gradient(#f2059f, #6929f2);
+	--second-app-background: linear-gradient(#f20505, #f2059f);
+	--third-app-background: linear-gradient(#f2059f, #eb5f76, #fdcf5c);
 	--element-background: #f25c5c;
 	--button-background: linear-gradient(#f2059f, #f20505);
 	--nav-background: linear-gradient(#6929f2, #f2059f);
-	--main-font: "DynaPuff", system-ui;
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	--active-button-background: radial-gradient(
+		circle,
+		rgba(242, 5, 159, 1) 0%,
+		rgba(253, 207, 92, 1) 100%
+	);
+	--main-font: "DynaPuff";
+	--font-color: white;
 }

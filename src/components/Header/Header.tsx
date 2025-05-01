@@ -1,7 +1,15 @@
 import "./Header.css";
 
 function Header() {
-	return <h1>Header </h1>;
+	return (
+		<>
+			<img
+				src="../src/images/pink-rabbit-logo.png"
+				alt="logo de pink rabbit"
+				className="pr-logo"
+			/>
+		</>
+	);
 }
 
 export default Header;
