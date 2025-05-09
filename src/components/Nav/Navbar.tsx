@@ -5,6 +5,7 @@ function Navbar() {
 	return (
 		<>
 			<nav className="menu-nav">
+				<h2 className="menu-title">menu</h2>
 				<NavLink to="/">
 					<img
 						src="./src/images/home-icon.png"
