@@ -1,0 +1,23 @@
+.cocktail-image {
+	height: 440px;
+	width: 320px;
+	border-radius: 25px;
+}
+
+.cocktail-buttons {
+	margin: 3em;
+	display: grid;
+	grid-template-columns: repeat(3, 100px);
+	gap: 12px;
+	justify-content: center;
+	grid-auto-flow: row;
+	cursor: pointer;
+}
+
+.full-cocktail-card {
+	@media screen and (min-width: 992px) {
+		display: flex;
+		justify-content: center;
+		margin: 3em;
+	}
+}
