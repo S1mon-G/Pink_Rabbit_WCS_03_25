@@ -1,7 +1,8 @@
 import "./ProfileCard.css";
+
+import type { Profile } from "../../Interfaces/Profile";
 import cocktailLogo from "../../assets/images/cocktail_logo.png";
 import likeLogo from "../../assets/images/like_logo.png";
-import type { Profile } from "../../assets/interfaces/ProfileInterface";
 
 interface ProfileCardProps {
 	profile: Profile;

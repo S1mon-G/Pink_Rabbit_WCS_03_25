@@ -3,7 +3,7 @@ import "./QuizButton.css";
 interface QuizButtonProps {
 	ingredients: string;
 	onClick: (ingredient: string) => void;
-	ingredientState: "wrong" | "right" | "default";
+	ingredientState: boolean;
 }
 
 function QuizButton({
@@ -12,10 +12,10 @@ function QuizButton({
 	ingredientState,
 }: QuizButtonProps) {
 	const buttonStyle =
-		ingredientState === "wrong"
-			? "button-wrong"
-			: ingredientState === "right"
-				? "button-right"
+		ingredientState === false
+			? "button-right"
+			: ingredientState === true
+				? "button-wrong"
 				: "button-default";
 
 	return (
