@@ -1,19 +1,13 @@
 import "./ProfileCard.css";
 import cocktailLogo from "../../assets/images/cocktail_logo.png";
 import likeLogo from "../../assets/images/like_logo.png";
+import type { Profile } from "../../assets/interfaces/ProfileInterface";
 
-interface ProfileCardInterface {
-	profile: {
-		id: number;
-		firstname: string;
-		genre: string;
-		age: number;
-		cocktail: string;
-		picture: string;
-	};
+interface ProfileCardProps {
+	profile: Profile;
 }
 
-function ProfileCard({ profile }: ProfileCardInterface) {
+function ProfileCard({ profile }: ProfileCardProps) {
 	return (
 		<article className="profile-card">
 			<div
