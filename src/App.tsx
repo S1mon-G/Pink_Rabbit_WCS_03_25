@@ -1,10 +1,15 @@
+import { Outlet } from "react-router";
+
+import Header from "./components/Header/Header";
+import Nav from "./components/Nav/Nav";
 import "./App.css";
-import Profile from "./pages/Profile";
 
 function App() {
 	return (
 		<>
-			<Profile />
+			<Header />
+			<Outlet />
+			<Nav />
 		</>
 	);
 }
