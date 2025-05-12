@@ -1,4 +1,4 @@
-import type { ProfileInterface } from "../Interfaces/Profile";
+import type { ProfileInterface } from "../interfaces/Profile";
 
 interface ProfileCardProps {
 	profile: ProfileInterface;

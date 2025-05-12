@@ -1,11 +1,12 @@
 import { useCallback, useEffect, useState } from "react";
 
-import type { Profile } from "../Interfaces/Profile";
-import type { Cocktail } from "../Interfaces/Cocktail";
 import CocktailCard from "../components/CocktailCard/CocktailCard";
 import ProfileCard from "../components/ProfileCard";
 import RandomButton from "../components/RandomButton/RandomButton";
 import ProfileData from "../data/ProfileData.json";
+
+import type { Cocktail } from "../interfaces/Cocktail";
+import type { Profile } from "../interfaces/Profile";
 
 const popularCocktailList = [
 	"Margarita",

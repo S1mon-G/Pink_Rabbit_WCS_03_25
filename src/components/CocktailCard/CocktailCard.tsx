@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import type { Cocktail } from "../../Interfaces/Cocktail";
+import type { Cocktail } from "../../interfaces/Cocktail";
 import QuizButton from "../QuizButton/QuizButton";
 import ShakeButton from "../ShakeButton/ShakeButton";
 

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import type { Cocktail } from "../Interfaces/Cocktail";
+import type { Cocktail } from "../interfaces/Cocktail";
 
 export const useCocktailIngredients = (cocktail: Cocktail): string[] => {
 	return useMemo(() => {
