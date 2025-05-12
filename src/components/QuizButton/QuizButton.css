@@ -5,6 +5,7 @@
 	font-family: var(--main-font);
 	color: var(--font-color);
 	border-radius: 69px;
+	border: none;
 	height: 100px;
 	width: 100px;
 	cursor: pointer;
@@ -14,11 +15,11 @@
 	background: var(--active-button-background);
 }
 
-.button-default,
-.button-wrong {
+.button-default {
 	background: var(--button-background);
 }
 
 .button-wrong {
 	transform: rotate(0.5turn);
+	background: var(--button-background);
 }

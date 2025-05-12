@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 
-import type { ProfileInterface } from "../Interfaces/ProfileInterface";
-import type { CocktailInterface } from "../Interfaces/CocktailInterface";
+import type { Profile } from "../Interfaces/Profile";
+import type { Cocktail } from "../Interfaces/Cocktail";
 import CocktailCard from "../components/CocktailCard/CocktailCard";
 import ProfileCard from "../components/ProfileCard";
 import RandomButton from "../components/RandomButton/RandomButton";
@@ -25,9 +25,8 @@ const popularCocktailList = [
 const profile = ProfileData[Math.floor(Math.random() * ProfileData.length)];
 
 function Quiz() {
-	const [cocktail, setCocktail] = useState<CocktailInterface | null>(null);
-	const [selectedProfile, setSelectedProfile] =
-		useState<ProfileInterface | null>(null);
+	const [cocktail, setCocktail] = useState<Cocktail | null>(null);
+	const [selectedProfile, setSelectedProfile] = useState<Profile | null>(null);
 
 	const fetchRandomCocktail = useCallback(async () => {
 		const randomCocktail =
@@ -50,7 +49,7 @@ function Quiz() {
 		setCocktail(profileCocktailData?.drinks?.[0]);
 	};
 
-	const handleSelectProfile = (profile: ProfileInterface) => {
+	const handleSelectProfile = (profile: Profile) => {
 		setSelectedProfile(profile);
 		fetchProfileCocktail(profile.favouriteCocktail);
 	};
