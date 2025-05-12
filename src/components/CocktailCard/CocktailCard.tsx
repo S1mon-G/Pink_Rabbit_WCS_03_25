@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-import type { CocktailInterface } from "../../Interfaces/CocktailInterface";
+import type { Cocktail } from "../../interfaces/Cocktail";
 import QuizButton from "../QuizButton/QuizButton";
 import ShakeButton from "../ShakeButton/ShakeButton";
 
 import "./CocktailCard.css";
+import { useCocktailIngredients } from "../../hooks/useCocktailIngredients";
 
 interface CocktailCardProps {
-	cocktail: CocktailInterface;
+	cocktail: Cocktail;
 	isProfileCocktail: boolean;
 }
-type ingredientState = "default" | "right" | "wrong";
+type ingredientState = boolean;
 
 const fakeIngredients = [
 	"green tea",
@@ -21,17 +22,13 @@ const fakeIngredients = [
 ];
 
 function CocktailCard({ cocktail, isProfileCocktail }: CocktailCardProps) {
-	const [selectedStates, setSelectedStates] = useState<
+	const [selectedIngredients, setSelectedIngredients] = useState<
 		Record<string, ingredientState>
 	>({});
 
 	const [quizIngredients, setQuizIngredients] = useState<string[]>([]);
-
+	const cocktailIngredients = useCocktailIngredients(cocktail);
 	useEffect(() => {
-		const cocktailIngredients = Object.keys(cocktail)
-			.filter((key) => key.startsWith("strIngredient") && cocktail[key])
-			.map((key) => cocktail[key].toLowerCase());
-
 		const shuffledFakeIngredients = [...fakeIngredients].sort(
 			() => Math.random() - 0.5,
 		);
@@ -47,13 +44,14 @@ function CocktailCard({ cocktail, isProfileCocktail }: CocktailCardProps) {
 		].sort(() => Math.random() - 0.5);
 
 		setQuizIngredients(finalIngredients);
-	}, [cocktail]);
+	}, [cocktailIngredients]);
 
 	const handleIngredientClick = (ingredient: string) => {
 		const isFake = fakeIngredients.includes(ingredient);
-		setSelectedStates((prev) => ({
+
+		setSelectedIngredients((prev) => ({
 			...prev,
-			[ingredient]: isFake ? "wrong" : "right",
+			[ingredient]: isFake,
 		}));
 	};
 
@@ -72,14 +70,14 @@ function CocktailCard({ cocktail, isProfileCocktail }: CocktailCardProps) {
 							key={ingredient}
 							ingredients={ingredient}
 							onClick={handleIngredientClick}
-							ingredientState={selectedStates[ingredient] || "default"}
+							ingredientState={selectedIngredients[ingredient]}
 						/>
 					))}
 				</div>
 			</section>
 			<ShakeButton
 				cocktail={cocktail}
-				selectedStates={selectedStates}
+				selectedIngredients={selectedIngredients}
 				isProfileCocktail={isProfileCocktail}
 			/>
 		</>

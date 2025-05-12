@@ -1,29 +1,28 @@
 import Swal from "sweetalert2";
 import "./ShakeButton.css";
-import type { CocktailInterface } from "../../Interfaces/CocktailInterface";
+import type { Cocktail } from "../../interfaces/Cocktail";
 
 import { useNavigate } from "react-router";
+import { useCocktailIngredients } from "../../hooks/useCocktailIngredients";
 
 interface ShakeButtonProps {
-	cocktail: CocktailInterface;
-	selectedStates: { [key: string]: string };
+	cocktail: Cocktail;
+	selectedIngredients: { [key: string]: boolean };
 	isProfileCocktail?: boolean;
 }
 
 function ShakeButton({
 	cocktail,
-	selectedStates,
+	selectedIngredients,
 	isProfileCocktail = false,
 }: ShakeButtonProps) {
 	const navigate = useNavigate();
 
-	const handleShakeButton = () => {
-		const cocktailIngredients = Object.keys(cocktail)
-			.filter((key) => key.startsWith("strIngredient") && cocktail[key])
-			.map((key) => cocktail[key].toLowerCase());
+	const cocktailIngredients = useCocktailIngredients(cocktail);
 
+	const handleShakeButton = () => {
 		const allRightIngredients = cocktailIngredients.every(
-			(ingredient) => selectedStates[ingredient] === "right",
+			(ingredient) => selectedIngredients[ingredient] === false,
 		);
 
 		if (allRightIngredients) {
