@@ -1,0 +1,11 @@
+.carousel {
+	margin: 6em 0;
+	display: flex;
+	justify-content: center;
+}
+.carousel-card {
+	max-width: 65ch;
+	width: 33%;
+	background: var(--element-background);
+	border-radius: 25px;
+}
