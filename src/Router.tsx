@@ -6,7 +6,7 @@ import Chat from "./pages/Chat";
 import Cocktail from "./pages/Cocktail";
 import CocktailList from "./pages/CocktailList";
 import Home from "./pages/Home";
-import Profile from "./pages/Profile";
+
 import ProfileFavourites from "./pages/ProfileFavourites";
 import ProfileList from "./pages/ProfileList";
 import Quiz from "./pages/Quiz";
@@ -18,7 +18,6 @@ const router = createBrowserRouter([
 			{ path: "/", element: <Home /> },
 			{ path: "/profile-list", element: <ProfileList /> },
 			{ path: "/quiz", element: <Quiz /> },
-			{ path: "/profile", element: <Profile /> },
 			{ path: "/chat", element: <Chat /> },
 			{ path: "/cocktail-list", element: <CocktailList /> },
 			{ path: "/cocktail", element: <Cocktail /> },

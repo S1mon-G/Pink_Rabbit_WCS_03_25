@@ -2,9 +2,13 @@ import "./Header.css";
 
 function Header() {
 	return (
-		<div className="header">
-			<img src="src/image/logo pink_rabbit.png" alt="pink rabbit" />
-		</div>
+		<>
+			<img
+				src="../src/images/pink-rabbit-logo.png"
+				alt="logo de pink rabbit"
+				className="pr-logo"
+			/>
+		</>
 	);
 }
 

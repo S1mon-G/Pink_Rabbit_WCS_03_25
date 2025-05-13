@@ -1,0 +1,25 @@
+.button-wrong,
+.button-right,
+.button-default {
+	box-shadow: 1px 2px 10px black;
+	font-family: var(--main-font);
+	color: var(--font-color);
+	border-radius: 69px;
+	border: none;
+	height: 100px;
+	width: 100px;
+	cursor: pointer;
+}
+
+.button-right {
+	background: var(--active-button-background);
+}
+
+.button-default {
+	background: var(--button-background);
+}
+
+.button-wrong {
+	transform: rotate(0.5turn);
+	background: var(--button-background);
+}

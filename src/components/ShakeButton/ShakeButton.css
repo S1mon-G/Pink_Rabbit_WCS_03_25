@@ -1,0 +1,10 @@
+.shake-button {
+	width: 200px;
+	height: 75px;
+	border-radius: 25px;
+	background: var(--button-background);
+	box-shadow: 1px 4px 12px black;
+	font-family: var(--main-font);
+	color: white;
+	cursor: pointer;
+}
