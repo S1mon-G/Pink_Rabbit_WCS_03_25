@@ -21,19 +21,21 @@ const items = [
 ];
 
 const RulesCarousel = () => (
-	<section className="carousel">
-		<div className="carousel-card">
-			<AliceCarousel
-				mouseTracking
-				items={items}
-				infinite
-				activeIndex={0}
-				autoPlayInterval={3000}
-				disableDotsControls={false}
-				disableButtonsControls={false}
-			/>
-		</div>
-	</section>
+	<>
+		<section className="carousel">
+			<div className="carousel-card">
+				<AliceCarousel
+					mouseTracking
+					items={items}
+					infinite
+					activeIndex={0}
+					autoPlayInterval={3000}
+					disableDotsControls={false}
+					disableButtonsControls={false}
+				/>
+			</div>
+		</section>
+	</>
 );
 
 export default RulesCarousel;

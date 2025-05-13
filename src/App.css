@@ -17,3 +17,12 @@ p {
 	src: url("/src/fonts/DynaPuff-Regular.ttf");
 	font-weight: normal;
 }
+
+.start-button {
+	background: var(--button-background);
+	border: none;
+	border-radius: 25px;
+	margin-bottom: 10em;
+	width: 150px;
+	cursor: pointer;
+}
