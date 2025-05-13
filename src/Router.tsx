@@ -6,6 +6,7 @@ import Chat from "./pages/Chat";
 import Cocktail from "./pages/Cocktail";
 import CocktailList from "./pages/CocktailList";
 import Home from "./pages/Home";
+
 import ProfileFavourites from "./pages/ProfileFavourites";
 import ProfileList from "./pages/ProfileList";
 import Quiz from "./pages/Quiz";
