@@ -34,7 +34,7 @@ function ShakeButton({
 				showConfirmButton: false,
 			}).then(() => {
 				if (isProfileCocktail) {
-					navigate("/profile");
+					navigate("/full-profile");
 				}
 			});
 		} else {
