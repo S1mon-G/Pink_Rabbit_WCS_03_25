@@ -1,6 +1,6 @@
 import Swal from "sweetalert2";
 import "./ShakeButton.css";
-import type { Cocktail } from "../../interfaces/Cocktail";
+import type { Cocktail } from "../../Interfaces/Cocktail";
 
 import { useNavigate } from "react-router";
 import { useCocktailIngredients } from "../../hooks/useCocktailIngredients";
