@@ -6,7 +6,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+p {
 	font-family: var(--main-font);
 	color: var(--font-color);
 }
@@ -15,4 +16,13 @@ h2 {
 	font-family: "DynaPuff";
 	src: url("/src/fonts/DynaPuff-Regular.ttf");
 	font-weight: normal;
+}
+
+.start-button {
+	background: var(--button-background);
+	border: none;
+	border-radius: 25px;
+	margin-bottom: 10em;
+	width: 150px;
+	cursor: pointer;
 }
