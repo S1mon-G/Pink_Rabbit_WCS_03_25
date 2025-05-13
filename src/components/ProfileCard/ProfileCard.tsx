@@ -2,7 +2,7 @@ import "./ProfileCard.css";
 
 import type { Profile } from "../../Interfaces/Profile";
 import cocktailLogo from "../../assets/images/cocktail_logo.png";
-import likeLogo from "../../assets/images/like_logo.png";
+import LikeButton from "../LikeButton/LikeButton";
 
 interface ProfileCardProps {
 	profile: Profile;
@@ -26,7 +26,7 @@ function ProfileCard({ profile }: ProfileCardProps) {
 				</div>
 				<div id="logo-container">
 					<div id="like-logo">
-						<img src={likeLogo} alt="like" />
+						<LikeButton />
 					</div>
 					<div id="cocktail-logo">
 						<img src={cocktailLogo} alt="cocktailLogo" />
