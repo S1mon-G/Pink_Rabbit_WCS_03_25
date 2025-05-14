@@ -1,16 +1,8 @@
 import { useState } from "react";
 import "./Chat.css";
 
-interface Message {
-	id: number;
-	user: string;
-	text: string;
-}
-
-interface Response {
-	id: number;
-	text: string;
-}
+import type { Message } from "../Interfaces/Message";
+import type { Response } from "../Interfaces/Response";
 
 const responses: Response[] = [
 	{
