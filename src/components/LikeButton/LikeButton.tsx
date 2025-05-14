@@ -2,7 +2,7 @@ import "./LikeButton.css";
 import { useEffect, useState } from "react";
 import type { Profile } from "../../Interfaces/Profile";
 import likeLogoRed from "../../assets/images/heart_red_logo.png";
-import likeLogo from "../../assets/images/heart_unliked_logo.png";
+import likeLogo from "../../assets/images/like_logo.png";
 import { useLikedProfiles } from "../../contexts/LikedProfilesContext";
 
 interface ProfileCardProps {
@@ -38,7 +38,7 @@ function LikeButton({ profile }: ProfileCardProps) {
 			onKeyUp={handleLike}
 			src={isLiked ? likeLogoRed : likeLogo}
 			alt="like"
-			id="logo-container"
+			id="heart"
 		/>
 	);
 }
