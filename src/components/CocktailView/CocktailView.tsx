@@ -1,4 +1,3 @@
-import { Link } from "react-router";
 import "./CocktailView.css";
 import type { Cocktail } from "../../Interfaces/Cocktail";
 
@@ -16,9 +15,7 @@ function CocktailView({ cocktail }: CocktailViewProps) {
 				height="auto"
 			/>
 			<div className="cocktail-details">
-				<h2 className="cocktail-name">
-					{/* TODO: <Link to={"/cocktail/${cocktail.idDrink}"}>{cocktail.strDrink}</Link> */}
-				</h2>
+				<h2 className="cocktail-name">{cocktail.strDrink}</h2>
 			</div>
 		</div>
 	);
