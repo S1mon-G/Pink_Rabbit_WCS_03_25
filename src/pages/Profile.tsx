@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router";
 import ProfileData from "../data/ProfileData.json";
 
-function FullProfile() {
+function Profile() {
 	const navigate = useNavigate();
-	const handleClick = () => {
+	const accessChat = () => {
 		navigate("/chat");
 	};
-	const handleBarClick = () => {
+	const accessBar = () => {
 		window.open(
 			"https://www.instagram.com/explore/locations/1021464342/bar-lavant-scene/",
 			"_blank",
@@ -27,11 +27,11 @@ function FullProfile() {
 					src={profile.favouriteBarPicture}
 					alt="le bar l'avant-scène"
 					className="bar-picture"
-					onClick={handleBarClick}
-					onKeyUp={handleBarClick}
+					onClick={accessBar}
+					onKeyUp={accessBar}
 				/>
 				<h3 className="bar-adress">c'est au {profile.favouriteBarAdress}</h3>
-				<button type="button" onClick={handleClick} className="chat-button">
+				<button type="button" onClick={accessChat} className="chat-button">
 					<h2>On discute ? 🥂</h2>
 				</button>
 			</div>
@@ -39,4 +39,4 @@ function FullProfile() {
 	);
 }
 
-export default FullProfile;
+export default Profile;
