@@ -1,11 +1,11 @@
 .cocktail-image {
-	height: 440px;
-	width: 320px;
+	height: 295px;
+	width: auto;
 	border-radius: 25px;
 }
 
 .cocktail-buttons {
-	margin: 3em;
+	margin: 1em 3em;
 	display: grid;
 	grid-template-columns: repeat(3, 100px);
 	gap: 12px;

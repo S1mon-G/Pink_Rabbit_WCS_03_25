@@ -6,6 +6,7 @@
 	box-shadow: 1px 4px 12px black;
 	font-family: var(--main-font);
 	color: var(--font-color);
-	margin: 2em;
+	margin: 0 2em;
 	cursor: pointer;
+	border: none;
 }
