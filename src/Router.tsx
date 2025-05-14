@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router";
 
 import App from "./App";
-
 import Chat from "./pages/Chat";
 import Cocktail from "./pages/Cocktail";
 import CocktailList from "./pages/CocktailList";

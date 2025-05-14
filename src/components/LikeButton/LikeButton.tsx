@@ -1,19 +1,34 @@
 import "./LikeButton.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import type { Profile } from "../../Interfaces/Profile";
 import likeLogoRed from "../../assets/images/heart_red_logo.png";
 import likeLogo from "../../assets/images/heart_unliked_logo.png";
+import { useLikedProfiles } from "../../contexts/LikedProfilesContext";
 
-const LikeButton = () => {
+interface ProfileCardProps {
+	profile: Profile;
+}
+
+function LikeButton({ profile }: ProfileCardProps) {
 	const [isLiked, setIsLiked] = useState(false);
-	const [likes, setLikes] = useState(0);
+	const { likedProfiles, setLikedProfiles } = useLikedProfiles();
+
+	useEffect(() => {
+		const alreadyLiked = likedProfiles.some(
+			(likedProfile) => likedProfile.id === profile.id,
+		);
+		setIsLiked(alreadyLiked);
+	}, [likedProfiles, profile.id]);
 
 	const handleLike = () => {
 		if (isLiked) {
-			setLikes(likes - 1);
 			setIsLiked(false);
+			setLikedProfiles((prev) =>
+				prev.filter((likedProfile) => likedProfile.id !== profile.id),
+			);
 		} else {
-			setLikes(likes + 1);
 			setIsLiked(true);
+			setLikedProfiles((prev) => [...prev, profile]);
 		}
 	};
 
@@ -26,5 +41,5 @@ const LikeButton = () => {
 			id="logo-container"
 		/>
 	);
-};
+}
 export default LikeButton;
