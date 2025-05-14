@@ -29,11 +29,11 @@ p {
 }
 
 .start-button {
-	margin-bottom: 10em;
+	margin-bottom: 2em;
 }
 
 .chat-button {
-	margin-bottom: 2em;
+	margin: 2em 0;
 }
 .profile-details {
 	display: flex;

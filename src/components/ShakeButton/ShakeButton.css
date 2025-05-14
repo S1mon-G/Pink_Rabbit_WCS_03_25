@@ -7,4 +7,5 @@
 	font-family: var(--main-font);
 	color: white;
 	cursor: pointer;
+	border: none;
 }

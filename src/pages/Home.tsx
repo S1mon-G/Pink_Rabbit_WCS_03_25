@@ -39,8 +39,11 @@ function Home() {
 
 	return (
 		<>
-			<h2>Bienvenue sur l'appli de rencontre pour les fans de mixologie 🍸 </h2>
-			<h2>Comment ça marche ?</h2>
+			<h3>
+				Bienvenue sur l'appli de rencontre <br />
+				pour les fans de mixologie 🍸{" "}
+			</h3>
+			<h3>Comment ça marche ?</h3>
 			<RulesCarousel />
 			<button
 				type="button"
