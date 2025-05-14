@@ -20,7 +20,7 @@ function ShakeButton({
 
 	const cocktailIngredients = useCocktailIngredients(cocktail);
 
-	const handleShakeButton = () => {
+	const ValidateCocktail = () => {
 		const allRightIngredients = cocktailIngredients.every(
 			(ingredient) => selectedIngredients[ingredient] === false,
 		);
@@ -48,7 +48,7 @@ function ShakeButton({
 		}
 	};
 	return (
-		<button type="button" className="shake-button" onClick={handleShakeButton}>
+		<button type="button" className="shake-button" onClick={ValidateCocktail}>
 			let's shake !
 		</button>
 	);

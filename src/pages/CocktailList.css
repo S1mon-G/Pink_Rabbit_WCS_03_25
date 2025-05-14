@@ -1,0 +1,33 @@
+body {
+	font-style: var(--main-font);
+	font-size: 20px;
+}
+.cocktail-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.cocktail-list h1 {
+	font-size: 20px;
+	font-weight: normal;
+}
+.cocktail-list-filter {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	font-weight: normal;
+}
+
+.input {
+	margin: 20px;
+	padding: 20px;
+	padding-inline: 100px;
+	border-radius: 25px;
+}
+
+@media screen and (max-width: 740px) {
+	.cocktail-list {
+		font-size: 1em;
+	}
+}
