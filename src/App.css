@@ -7,6 +7,7 @@ body {
 
 h1,
 h2,
+h3,
 p {
 	font-family: var(--main-font);
 	color: var(--font-color);
@@ -18,11 +19,50 @@ p {
 	font-weight: normal;
 }
 
-.start-button {
+.start-button,
+.chat-button {
 	background: var(--button-background);
 	border: none;
 	border-radius: 25px;
-	margin-bottom: 10em;
-	width: 150px;
 	cursor: pointer;
+	width: 150px;
+}
+
+.start-button {
+	margin-bottom: 10em;
+}
+
+.chat-button {
+	margin-bottom: 2em;
+}
+.profile-details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.chat-button {
+	font-family: var(--main-font);
+	color: var(--font-color);
+	height: 70px;
+}
+
+.bar-picture,
+.fullprofile-image {
+	width: 80%;
+	border-radius: 1rem;
+	overflow: hidden;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	margin: 2rem;
+	@media screen and (min-width: 992px) {
+		width: 50%;
+	}
+}
+
+.bar-picture {
+	cursor: pointer;
+}
+
+.bar-adress {
+	margin-top: 0;
 }

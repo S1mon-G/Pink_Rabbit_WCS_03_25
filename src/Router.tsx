@@ -6,7 +6,7 @@ import Chat from "./pages/Chat";
 import Cocktail from "./pages/Cocktail";
 import CocktailList from "./pages/CocktailList";
 import Home from "./pages/Home";
-
+import Profile from "./pages/Profile";
 import ProfileFavourites from "./pages/ProfileFavourites";
 import ProfileList from "./pages/ProfileList";
 import Quiz from "./pages/Quiz";
@@ -22,6 +22,7 @@ const router = createBrowserRouter([
 			{ path: "/cocktail-list", element: <CocktailList /> },
 			{ path: "/cocktail", element: <Cocktail /> },
 			{ path: "/profile-favourites", element: <ProfileFavourites /> },
+			{ path: "/profile", element: <Profile /> },
 		],
 	},
 ]);
