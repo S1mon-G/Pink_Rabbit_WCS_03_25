@@ -8,6 +8,8 @@ import ProfileData from "../data/ProfileData.json";
 import type { Cocktail } from "../Interfaces/Cocktail";
 import type { Profile } from "../Interfaces/Profile";
 
+import "./Quiz.css";
+
 const popularCocktailList = [
 	"Margarita",
 	"Daiquiri",
@@ -61,9 +63,7 @@ function Quiz() {
 
 	return (
 		<>
-			<h2>
-				Entraîne toi à trouver <br /> les ingrédients des cocktails !
-			</h2>
+			<h2 className="quiz-title">trouve les ingrédients des cocktails !</h2>
 
 			{selectedProfile ? (
 				<>

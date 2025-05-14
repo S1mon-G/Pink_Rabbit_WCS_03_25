@@ -7,6 +7,11 @@
 }
 .carousel-card {
 	width: 232px;
+	height: 213px;
 	background: var(--element-background);
 	border-radius: 25px;
+}
+
+.second-pannel {
+	padding-top: 2em;
 }
