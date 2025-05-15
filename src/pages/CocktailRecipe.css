@@ -14,7 +14,7 @@
 }
 
 .cocktail-instructions {
-	text-align: left;
+	text-align: center;
 	padding: 1rem;
 }
 
@@ -33,5 +33,7 @@
 	}
 	.cocktail-detail ul {
 		color: white;
+		list-style: none;
+		padding-right: 2em;
 	}
 }

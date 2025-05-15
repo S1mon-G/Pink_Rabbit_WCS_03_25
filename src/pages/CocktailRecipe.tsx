@@ -73,10 +73,8 @@ function CocktailRecipe() {
 				<div className="cocktail-instructions">
 					<h3>Verre :</h3>
 					<p>{cocktail.strGlass}</p>
-
 					<h3>Instructions :</h3>
 					<p>{cocktail.strInstructionsFR}</p>
-
 					<h3>Ingrédients :</h3>
 					<ul>
 						{ingredientsList.map((item) => (

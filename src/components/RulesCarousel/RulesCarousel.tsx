@@ -21,11 +21,11 @@ const items = [
 	</div>,
 	<div key={3} onDragStart={handleDragStart}>
 		<h1>2</h1>
-		<p>choisis le profil qui t’intéresse</p>
+		<p>Choisis le profil qui t’intéresse</p>
 	</div>,
 	<div key={4} onDragStart={handleDragStart}>
 		<h1>3</h1>
-		<p>répond au quizz et tente de débloquer le profil complet</p>
+		<p>Réponds au quiz et tente de débloquer le profil complet</p>
 	</div>,
 ];
 

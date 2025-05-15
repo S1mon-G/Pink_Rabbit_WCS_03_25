@@ -25,7 +25,7 @@ const popularCocktailList = [
 	"Gin Tonic",
 ];
 
-const profile = ProfileData[Math.floor(Math.random() * ProfileData.length)];
+const profile = ProfileData[0];
 
 function Quiz() {
 	const [cocktail, setCocktail] = useState<Cocktail | null>(null);
@@ -74,10 +74,16 @@ function Quiz() {
 				</>
 			) : (
 				<>
-					<button type="button" onClick={() => handleSelectProfile(profile)}>
-						profil choisi
-					</button>
-					<RandomButton onClick={fetchRandomCocktail} />
+					<div className="all-quiz-buttons">
+						<RandomButton onClick={fetchRandomCocktail} />
+						<button
+							type="button"
+							className="secret-button"
+							onClick={() => handleSelectProfile(profile)}
+						>
+							<h3 className="secret-text">profil choisi</h3>
+						</button>
+					</div>
 					{cocktail && (
 						<CocktailCard cocktail={cocktail} isProfileCocktail={false} />
 					)}

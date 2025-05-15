@@ -48,8 +48,7 @@ p {
 	height: 70px;
 }
 
-.bar-picture,
-.fullprofile-image {
+.bar-picture {
 	width: 80%;
 	border-radius: 1rem;
 	overflow: hidden;
