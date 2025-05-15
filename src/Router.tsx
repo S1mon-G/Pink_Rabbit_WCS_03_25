@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router";
 
 import App from "./App";
 import Chat from "./pages/Chat";
-import Cocktail from "./pages/Cocktail";
 import CocktailList from "./pages/CocktailList";
+import CocktailRecipe from "./pages/CocktailRecipe";
 import Home from "./pages/Home";
 import Profile from "./pages/Profile";
 import ProfileFavourites from "./pages/ProfileFavourites";
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
 			{ path: "/quiz", element: <Quiz /> },
 			{ path: "/chat", element: <Chat /> },
 			{ path: "/cocktail-list", element: <CocktailList /> },
-			{ path: "/cocktail", element: <Cocktail /> },
+			{ path: "/cocktail-recipe", element: <CocktailRecipe /> },
 			{ path: "/profile-favourites", element: <ProfileFavourites /> },
 			{ path: "/profile", element: <Profile /> },
 		],

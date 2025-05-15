@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import CocktailCard from "../components/CocktailCard/CocktailCard";
 import "./CocktailList.css";
+import CocktailView from "../components/CocktailView/CocktailView";
 
 interface CocktailListProps {
 	cocktail: {
@@ -64,7 +64,7 @@ function CocktailList() {
 
 			<div className="cocktail-list-filter">
 				{cocktailFiltered.map((cocktail) => (
-					<CocktailCard key={cocktail.idDrink} cocktail={cocktail} />
+					<CocktailView key={cocktail.idDrink} cocktail={cocktail} />
 				))}
 			</div>
 		</div>
