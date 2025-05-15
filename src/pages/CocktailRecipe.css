@@ -1,0 +1,39 @@
+.cocktail-detail {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.cocktail-card {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 20px;
+	border: 10px;
+	border-radius: 25px;
+}
+
+.cocktail-instructions {
+	text-align: center;
+	padding: 1rem;
+}
+
+@media screen and (max-width: 740px) {
+	.cocktail-card h2 {
+		font-size: 25px;
+	}
+	.cocktail-instructions h3 {
+		color: white;
+		text-decoration: underline;
+		font-weight: bolder;
+	}
+	.cocktail-instructions p {
+		font-size: smaller;
+		font-weight: lighter;
+	}
+	.cocktail-detail ul {
+		color: white;
+		list-style: none;
+		padding-right: 2em;
+	}
+}

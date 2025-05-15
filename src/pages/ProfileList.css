@@ -1,0 +1,120 @@
+.genderfilter-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.age-text,
+.gender-text {
+	background: var(--element-background);
+	font-size: 1 em;
+	padding: 2rem;
+	border-radius: 2rem;
+}
+
+.age-text {
+	margin: 0 1rem;
+}
+.gender-text {
+	margin: 2rem;
+}
+
+.button-container {
+	display: grid;
+	gap: 1.25rem;
+	justify-items: center;
+	grid-template-areas:
+		"M . F"
+		". N .";
+}
+
+.gender-buttons {
+	background: var(--button-background);
+	border: none;
+}
+.gender-buttons img {
+	width: 100%;
+}
+
+#masculine {
+	grid-area: M;
+	grid-column: 1;
+	grid-row: 1;
+	box-shadow: 1px 2px 10px black;
+	border-radius: 4.3rem;
+	height: 6.25rem;
+	width: 6.25rem;
+}
+
+#feminine {
+	grid-area: F;
+	grid-column: 3;
+	grid-row: 1;
+	box-shadow: 1px 2px 10px black;
+	border-radius: 4.3rem;
+	height: 6.25rem;
+	width: 6.25rem;
+}
+
+#neutral {
+	grid-area: N;
+	grid-column: 2;
+	grid-row: 2;
+	box-shadow: 1px 2px 10px black;
+	border-radius: 4.3rem;
+	height: 6.25rem;
+	width: 6.25rem;
+}
+
+#masculine,
+#feminine,
+#neutral {
+	cursor: pointer;
+}
+
+.validate-button {
+	background: var(--button-background);
+	font-family: var(--main-font);
+	color: white;
+	height: auto;
+	font-size: 1rem;
+	padding: 1rem 2.5rem;
+	border: none;
+	border-radius: 2rem;
+	cursor: pointer;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.age-filter-container {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	padding: 1.5rem;
+	max-width: 90%;
+}
+
+.age-range-values {
+	display: flex;
+	justify-content: space-around;
+	font-family: var(--main-font);
+	font-size: 1.5em;
+	color: var(--font-color);
+}
+#age-slider {
+	height: 0.5rem;
+	border-radius: 1rem;
+	background: var(--element-background);
+}
+
+#age-slider::-moz-range-thumb {
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 50%;
+	background: var(--button-background);
+	cursor: pointer;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+	border: 2px solid #ff5e7d;
+}
+
+#cocktail-logo {
+	cursor: pointer;
+}

@@ -1,0 +1,17 @@
+.carousel {
+	margin-top: 3em;
+	margin-bottom: 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.carousel-card {
+	width: 232px;
+	height: 213px;
+	background: var(--element-background);
+	border-radius: 25px;
+}
+
+.second-pannel {
+	padding-top: 2em;
+}
