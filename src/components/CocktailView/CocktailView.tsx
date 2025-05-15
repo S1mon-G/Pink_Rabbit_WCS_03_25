@@ -1,4 +1,5 @@
 import "./CocktailView.css";
+import { useNavigate } from "react-router";
 import type { Cocktail } from "../../Interfaces/Cocktail";
 
 interface CocktailViewProps {
@@ -6,6 +7,8 @@ interface CocktailViewProps {
 }
 
 function CocktailView({ cocktail }: CocktailViewProps) {
+	const navigate = useNavigate();
+
 	return (
 		<div className="cocktail-card">
 			<img
@@ -15,7 +18,15 @@ function CocktailView({ cocktail }: CocktailViewProps) {
 				height="auto"
 			/>
 			<div className="cocktail-details">
-				<h2 className="cocktail-name">{cocktail.strDrink}</h2>
+				<h2
+					className="cocktail-name"
+					onClick={() => {
+						navigate("/cocktail-recipe");
+					}}
+					onKeyUp={undefined}
+				>
+					{cocktail.strDrink}
+				</h2>
 			</div>
 		</div>
 	);
