@@ -1,13 +1,11 @@
 import "./Header.css";
 
+import pinkRabbitLogo from "../../assets/images/pink_Rabbit_logo.png";
+
 function Header() {
 	return (
 		<>
-			<img
-				src="../src/images/pink-rabbit-logo.png"
-				alt="logo de pink rabbit"
-				className="pr-logo"
-			/>
+			<img src={pinkRabbitLogo} alt="logo de pink rabbit" className="pr-logo" />
 		</>
 	);
 }
