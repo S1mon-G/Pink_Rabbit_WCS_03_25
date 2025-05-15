@@ -3,12 +3,19 @@
 	flex-direction: column;
 }
 
-.main-text {
+.age-text,
+.gender-text {
 	background: var(--element-background);
-	margin: 1 rem;
 	font-size: 1 em;
 	padding: 2rem;
 	border-radius: 2rem;
+}
+
+.age-text {
+	margin: 0 1rem;
+}
+.gender-text {
+	margin: 2rem;
 }
 
 .button-container {

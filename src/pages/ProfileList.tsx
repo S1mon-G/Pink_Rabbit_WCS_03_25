@@ -31,7 +31,7 @@ function ProfileList() {
 		<>
 			{display === "displayGenre" && (
 				<section className="genderfilter-container">
-					<article className="main-text">
+					<article className="gender-text">
 						<h1>Je veux boire un verre avec :</h1>
 					</article>
 					<article className="button-container">
@@ -71,7 +71,7 @@ function ProfileList() {
 
 			{display === "displayAge" && (
 				<section className="age-filter-container">
-					<article className="main-text">
+					<article className="age-text">
 						<h1>Je cherche une personne entre :</h1>
 					</article>
 					<article id="age-slider-container">

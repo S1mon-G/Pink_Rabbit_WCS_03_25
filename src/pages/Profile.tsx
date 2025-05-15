@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router";
+import ProfileCard from "../components/ProfileCard/ProfileCard";
 import ProfileData from "../data/ProfileData.json";
 
 function Profile() {
@@ -7,21 +8,14 @@ function Profile() {
 		navigate("/chat");
 	};
 	const accessBar = () => {
-		window.open(
-			"https://www.instagram.com/explore/locations/1021464342/bar-lavant-scene/",
-			"_blank",
-		);
+		window.location.href = "https://maps.app.goo.gl/zaQmYDmHayE4pNPy8";
 	};
 	const profile = ProfileData[0];
 	return (
 		<>
 			<div className="profile-details">
-				<img
-					src={profile.picture}
-					alt="selected profile thumbnail"
-					className="fullprofile-image"
-				/>
-				<h2>Et si on se retrouvait à </h2>
+				<ProfileCard profile={profile} />
+				<h2>Mon bar préféré c'est </h2>
 				<h2>{profile.favouriteBar}</h2>
 				<img
 					src={profile.favouriteBarPicture}
@@ -30,7 +24,8 @@ function Profile() {
 					onClick={accessBar}
 					onKeyUp={accessBar}
 				/>
-				<h3 className="bar-adress">c'est au {profile.favouriteBarAdress}</h3>
+
+				<h3 className="bar-adress">au {profile.favouriteBarAdress}</h3>
 				<button type="button" onClick={accessChat} className="chat-button">
 					<h2>On discute ? 🥂</h2>
 				</button>
