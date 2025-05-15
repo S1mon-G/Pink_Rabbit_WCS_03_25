@@ -1,18 +1,20 @@
-import { useState } from "react";
-import profilesData from "../assets/data/profiles.json";
+import { useContext, useState } from "react";
 import feminineLogo from "../assets/images/feminine_logo.png";
 import masculineLogo from "../assets/images/masculine_logo.png";
 import neutralLogo from "../assets/images/neutral_logo.png";
 import ProfileCard from "../components/ProfileCard/ProfileCard";
-import "./Profile.css";
+import "./ProfileList.css";
+import { ProfileContext } from "../contexts/LikedProfilesContext";
 
 function ProfileList() {
+	const { profiles } = useContext(ProfileContext);
+
 	const [display, setDisplay] = useState("displayGenre");
 
 	const [filterGender, setFilterGender] = useState<string[]>([]);
 	const [filterAge, setFilterAge] = useState(60);
 
-	const profilesFiltered = profilesData.filter((profile) => {
+	const profilesFiltered = profiles.filter((profile) => {
 		return filterGender.includes(profile.gender) && profile.age <= filterAge;
 	});
 

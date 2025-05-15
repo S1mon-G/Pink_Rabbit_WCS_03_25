@@ -7,14 +7,23 @@ const handleDragStart = (e) => e.preventDefault();
 
 const items = [
 	<div key={0} onDragStart={handleDragStart}>
+		<h3>
+			Bienvenue sur l'appli de rencontre <br />
+			pour les fans de mixologie 🍸{" "}
+		</h3>
+	</div>,
+	<div key={1} onDragStart={handleDragStart}>
+		<h3 className="second-pannel">Comment ça marche ?</h3>
+	</div>,
+	<div key={2} onDragStart={handleDragStart}>
 		<h1>1</h1>
 		<p>Filtre les profils selon tes préférences</p>
 	</div>,
-	<div key={1} onDragStart={handleDragStart}>
+	<div key={3} onDragStart={handleDragStart}>
 		<h1>2</h1>
 		<p>choisis le profil qui t’intéresse</p>
 	</div>,
-	<div key={2} onDragStart={handleDragStart}>
+	<div key={4} onDragStart={handleDragStart}>
 		<h1>3</h1>
 		<p>répond au quizz et tente de débloquer le profil complet</p>
 	</div>,
